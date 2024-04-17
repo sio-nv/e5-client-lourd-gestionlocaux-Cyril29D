@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="m2l.desktop.gestion.controller.ClimsTableviewController">
+    <children>
+        <TableView fx:id="listeGClims" layoutX="59.0" layoutY="55.0" prefHeight="500.0" prefWidth="100.0">
+            <columns>
+                <TableColumn fx:id="marque" prefWidth="150" text="Marque" onEditCommit="#modificationClimatiseur">
+                    <!--On indique que ce champs est une propriété qui correspondra à une propriété dans la classe Climatiseur -->
+                    <cellValueFactory><PropertyValueFactory property= "marque"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="modele" prefWidth="150.0" text="Modele" >
+                    <!--On indique que ce champs est une propriété qui correspondra à une propriété dans la classe Climatiseur -->
+                    <cellValueFactory><PropertyValueFactory property= "modele"/></cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="puissance" prefWidth="150" text="Puissance" >
+                    <!--On indique que ce champs est une propriété qui correspondra à une propriété dans la classe Climatiseur -->
+                    <cellValueFactory><PropertyValueFactory property= "puissance"/></cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="surfaceMin" prefWidth="150" text="SurMinCouv" >
+                    <!--On indique que ce champs est une propriété qui correspondra à une propriété dans la classe Climatiseur -->
+                    <cellValueFactory><PropertyValueFactory property= "surface_min"/></cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="surfaceMax" prefWidth="150" text="SurMaxCouv" >
+                    <!--On indique que ce champs est une propriété qui correspondra à une propriété dans la classe Climatiseur -->
+                    <cellValueFactory><PropertyValueFactory property= "surface_max"/></cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="batiment" prefWidth="80" text="Bât" >
+                    <!--On indique que ce champs est une propriété qui correspondra à une propriété dans la classe Climatiseur -->
+                    <cellValueFactory><PropertyValueFactory property= "batiment"/></cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="nomSalle" prefWidth="150" text="Salle" >
+                    <!--On indique que ce champs est une propriété qui correspondra à une propriété dans la classe Climatiseur -->
+                    <cellValueFactory><PropertyValueFactory property= "nomSalle"/></cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+
+        <HBox spacing="100" alignment="CENTER">
+            <ImageView onMouseClicked="#ajoutClimatiseur" fitWidth="50" preserveRatio="true">
+                <image>
+                    <Image url="@images/add.png" />
+                </image>
+            </ImageView>
+
+            <ImageView onMouseClicked="#suppressionClimatiseur" fitWidth="50" preserveRatio="true">
+                <image>
+                    <Image url="@images/remove.png" />
+                </image>
+            </ImageView>
+
+            <ImageView onMouseClicked="#voirFournisseur" fitWidth="50" preserveRatio="true">
+                <image>
+                    <Image url="@images/eye.png" />
+                </image>
+            </ImageView>
+
+        </HBox>
+
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
+

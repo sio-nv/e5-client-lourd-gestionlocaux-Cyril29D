@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="m2l.desktop.gestion.controller.InterventionsTableviewController">
+    <children>
+        <TableView fx:id="toutesInterventions" layoutX="59.0" layoutY="55.0" prefHeight="1100.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="salleCol_all" prefWidth="150" text="Salle"/>
+                <TableColumn fx:id="intervenantCol_all" prefWidth="150.0" text="Intervenant"/>
+                <TableColumn fx:id="contactCol_all" prefWidth="150" text="Contact intervenant"/>
+            </columns>
+        </TableView>
+
+
+        <HBox spacing="100" alignment="CENTER">
+
+        <ImageView onMouseClicked="#ajoutIntervention" accessibleText="Ajouter une intervention" fitWidth="50" preserveRatio="true">
+            <image>
+                <Image url="@images/add.png" />
+            </image>
+        </ImageView>
+
+        </HBox>
+
+    </children>
+</VBox>

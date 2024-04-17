@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="m2l.desktop.gestion.controller.DetailsSalleController">
+    <ImageView>
+        <image>
+            <Image url="@images/work.png"/>
+        </image>
+    </ImageView>
+
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.Label?>
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="m2l.desktop.gestion.controller.InterventionsJourTableviewController">
+    <children>
+
+        <VBox>
+
+            <HBox style="fx-background-color:black" alignment="CENTER">
+                <Label fx:id="dateJour" minHeight="16" minWidth="100" prefHeight="100.0"
+                       text="La date"
+                       style="-fx-font-size:20; -fx-font-family:Impact; -fx-text-fill:black;"
+                />
+            </HBox>
+
+            <TableView fx:id="todayInt" layoutX="59.0" layoutY="55.0" prefHeight="600.0" prefWidth="200.0">
+                <columns>
+                    <TableColumn fx:id="salleCol" prefWidth="150" text="Salle"/>
+                    <TableColumn fx:id="intervenantCol" prefWidth="150.0" text="Intervenant"/>
+                    <TableColumn fx:id="contactCol" prefWidth="150" text="Contact intervenant"/>
+                    <TableColumn fx:id="motifCol" prefWidth="300" text="Motif intervention"/>
+                    <TableColumn fx:id="statutCol" prefWidth="300" text="Statut intervention"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</VBox>

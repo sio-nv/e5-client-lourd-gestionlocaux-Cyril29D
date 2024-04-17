@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="m2l.desktop.gestion.controller.DetailsFournisseurController"
+      prefHeight="400.0" prefWidth="600.0"
+      style="-fx-background-color: #ffefff">
+        <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+        </padding>
+
+        <HBox fx:id="nom" prefHeight="60" prefWidth="320" styleClass="boxes">
+            <children>
+                <Label minHeight="16" maxHeight="30" minWidth="100" text="Nom fournisseur : "
+                       fx:id="label_nom_fournisseur"/>
+                <Label minHeight="16" maxHeight="30" minWidth="69" text=" " fx:id="nom_fournisseur"/>
+            </children>
+        </HBox>
+
+        <HBox fx:id="adresse" prefHeight="60" prefWidth="320" styleClass="boxes">
+            <children>
+                <Label minHeight="16" maxHeight="30" minWidth="100" text="Adresse fournisseur : "
+                       fx:id="label_adr_fournisseur"/>
+                <Label minHeight="16" maxHeight="30" minWidth="69" text=" " fx:id="adresse_fournisseur"/>
+            </children>
+        </HBox>
+
+        <HBox fx:id="telephone" prefHeight="60" prefWidth="320" styleClass="boxes">
+            <children>
+                <Label minHeight="16" maxHeight="30" minWidth="100" text="Téléphone fournisseur : "
+                       fx:id="label_tel_fournisseur"/>
+                <Label minHeight="16" maxHeight="30" minWidth="69" text=" " fx:id="telephone_fournisseur"/>
+            </children>
+        </HBox>
+
+    </VBox>

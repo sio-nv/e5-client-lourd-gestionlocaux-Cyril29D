@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox id="AnchorPane" prefHeight="1000" prefWidth="1500" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="m2l.desktop.gestion.controller.PlanController"
+      style="-fx-background-color: linear-gradient(#DAE0F5, #EBEEF5);">
+
+    <children>
+        <VBox fx:id="zoneMenu" style="-fx-background-color: linear-gradient(#000000,#181370);-fx-padding: 30 10 0 10"
+             spacing="30">
+
+            <Label fx:id="rezDeChaussee" minHeight="16" minWidth="250"
+                   text="Rez-de-chaussée général" onMouseClicked="#affichePlanGlobal"
+                   style=" -fx-text-fill: #000000; -fx-alignment	: center; -fx-font-weight : bold; -fx-font-size : 15 px; -fx-border-width: 1px; -fx-border-color: white; -fx-text-fill: white;"
+            />
+
+            <Label fx:id="batA" minHeight="16" minWidth="250" onMouseClicked="#affichePlanBatA"
+                   text="Plan du bâtiment A"
+                   style=" -fx-text-fill: #000000; -fx-alignment	: center; -fx-font-weight : bold; -fx-font-size : 15 px; -fx-border-width: 1px; -fx-border-color: white; -fx-text-fill: white;"
+
+            />
+
+        </VBox>
+
+        <AnchorPane fx:id="zonePlan" prefHeight="700" prefWidth="1250">
+
+
+        </AnchorPane>
+
+
+    </children>
+</HBox>

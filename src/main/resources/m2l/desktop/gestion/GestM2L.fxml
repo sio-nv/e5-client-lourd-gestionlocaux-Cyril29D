@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+
+    </top>
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER" style="-fx-tab-min-height:100;-fx-tab-max-height:100">
+            <tabs>
+                <Tab text="Interventions du jour" >
+                    <graphic>
+                        <ImageView>
+                            <fitHeight>80</fitHeight>
+                            <preserveRatio>true</preserveRatio>
+                            <image>
+                                <Image url="@images/icon1.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+
+                    <fx:include source="interventions-jour-tableview.fxml" fx:id="liste_interventions_jour"/>
+
+
+                </Tab>
+
+                <Tab text="Voir toutes les interventions">
+                    <graphic>
+                        <ImageView>
+                            <fitHeight>80</fitHeight>
+                            <preserveRatio>true</preserveRatio>
+                            <image>
+                                <Image url="@images/icon2.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+
+                    <fx:include source="interventions-tableview.fxml" fx:id="liste_interventions"/>
+                </Tab>
+
+                <Tab text="Liste intervenants">
+                    <graphic>
+                        <ImageView>
+                            <fitHeight>80</fitHeight>
+                            <preserveRatio>true</preserveRatio>
+                            <image>
+                                <Image url="@images/icon3.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+
+
+                    <fx:include source="intervenants-tableview.fxml" fx:id="liste_intervenants"/>
+                </Tab>
+
+                <Tab text="Plan des locaux de la M2L">
+                    <graphic>
+                        <ImageView>
+
+                            <fitHeight>80</fitHeight>
+                            <preserveRatio>true</preserveRatio>
+                            <image>
+                                <Image url="@images/icon4.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <fx:include source="planGlobal.fxml" fx:id="planGlobal"/>
+                </Tab>
+
+
+                <Tab text="Climatiseurs">
+                    <graphic>
+                        <ImageView>
+                            <fitHeight>80</fitHeight>
+                            <preserveRatio>true</preserveRatio>
+                            <image>
+                                <Image url="@images/icon5.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+
+                    <fx:include source="climatiseurs-tableview.fxml" fx:id="listeClimatiseurs"/>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="m2l.desktop.gestion.controller.IntervenantsTableviewController">
+    <children>
+
+
+        <TableView layoutX="59.0" layoutY="55.0" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="100.0" text="numero"/>
+                <TableColumn prefWidth="150.0" text="nom"/>
+                <TableColumn prefWidth="150.0" text="rénom"/>
+                <TableColumn prefWidth="200" text="Société"/>
+                <TableColumn prefWidth="200" text="Contact intervenant"/>
+
+
+            </columns>
+        </TableView>
+
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
+

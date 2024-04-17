@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="m2l.desktop.gestion.controller.AccueilController"
+      style="-fx-background-color: linear-gradient(#DAE0F5, #EBEEF5)">
+    <children>
+        <Label text="Gestion des salles (interventions, entretiens, contacts, plans)" style="-fx-text-fill: blue;"/>
+
+        <ImageView id="logo">
+            <image>
+                <Image url="@images/logo.png"/>
+            </image>
+        </ImageView>
+
+        <Button fx:id="boutonCommencer" text="Commencer" onAction="#load"/>
+    </children>
+</VBox>
