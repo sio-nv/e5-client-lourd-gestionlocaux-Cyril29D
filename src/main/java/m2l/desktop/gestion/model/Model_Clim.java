@@ -60,7 +60,7 @@ public class Model_Clim {
             stmt = connexion.createStatement();
 
             //définition de la requête
-            String sql = "SELECT climatiseurs.id,marque,modele, puissance, surfaceMin,surfaceMax,nom, batiment from climatiseurs JOIN salles on salles.numeroSalle=numSalle";
+            String sql = "SELECT climatiseurs.id,marque,modele, puissance, surfaceMin,surfaceMax,salles.nom , batiment, societes.nom AS nomFour, adresse, telephone from climatiseurs JOIN salles on salles.numeroSalle=numSalle JOIN societes on societes.siret=climatiseurs.siret ";
             System.out.println("requête :"+sql);
             //exécution de la requête
             ResultSet rs = stmt.executeQuery(sql);
@@ -70,7 +70,7 @@ public class Model_Clim {
 
             //parcours des enregistrements résultats,
             //création de nouveaux objets "climatiseurs" et
-            //ajout de cet objet dans la liste
+            //ajout de cet objet dans la liste!
             while(rs.next())
             {
                 String mar = rs.getString("marque");
@@ -82,9 +82,30 @@ public class Model_Clim {
                 String batiment = rs.getString("batiment");
                 String nomSalle = rs.getString("nom");
 
+
+                //(situation F)il faut gerer les informations du forunisseur (les societés) 1ère partie
+                String nomFour = rs.getString("nomFour");
+                String adrFour = rs.getString("adresse");
+                int telFour = rs.getInt("telephone");
+
+                System.out.println(nomFour);
+                System.out.println(adrFour);
+                System.out.println(telFour);
+
+
+
+
+
                 Climatiseur c = new Climatiseur(id,mar,mod,pui,smi,sma);
                 c.setBatiment(batiment);
                 c.setNomSalle(nomSalle);
+
+                //(situation F)il faut gerer les informations du forunisseur (les societés) 2ère partie
+                c.setNomFour(nomFour);
+                c.setAdrFour(adrFour);
+                c.setTelFour(telFour);
+
+
                 climatiseurs.add(c);
             }
 

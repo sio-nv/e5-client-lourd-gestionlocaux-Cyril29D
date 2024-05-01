@@ -10,6 +10,18 @@ import java.util.List;
 
 public class Climatiseur {
 
+
+    private Fournisseur fournisseur;
+
+
+    public Fournisseur getFournisseur() {
+        return fournisseur;
+    }
+
+    public void setFournisseur(Fournisseur fournisseur) {
+        this.fournisseur = fournisseur;
+    }
+
     private String modele;
     private int id;
     private String marque;
@@ -20,6 +32,35 @@ public class Climatiseur {
 
     private String nomSalle;
     private String batiment;
+
+    public String getNomFour() {
+        return nomFour;
+    }
+
+    private String nomFour;
+
+    public String getAdrFour() {
+        return adrFour;
+    }
+
+    public int getTelFour() {
+        return telFour;
+    }
+
+    public void setNomFour(String nomFour) {
+        this.nomFour = nomFour;
+    }
+
+    public void setAdrFour(String adrFour) {
+        this.adrFour = adrFour;
+    }
+
+    public void setTelFour(int telFour) {
+        this.telFour = telFour;
+    }
+
+    private String adrFour;
+    private int telFour ;
 
 
 

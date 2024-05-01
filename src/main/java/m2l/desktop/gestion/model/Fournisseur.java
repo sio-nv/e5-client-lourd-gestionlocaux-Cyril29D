@@ -11,6 +11,10 @@ public class Fournisseur {
         this.telephone = telephone;
     }
 
+    public Fournisseur() {
+
+    }
+
     public String getNom() {
         return nom;
     }
